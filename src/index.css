@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Dark Theme with Vibrant Accents */
+
+@layer base {
+  :root {
+    /* Dark Theme Base Colors */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    /* Card & Surface Colors */
+    --card: 222 84% 6.9%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 222 84% 8.9%;
+
+    /* Surface & Overlay Colors */
+    --popover: 222 84% 6.9%;
+    --popover-foreground: 210 40% 98%;
+    --surface: 222 84% 7.5%;
+    --surface-variant: 222 84% 9.5%;
+
+    /* Brand & Accent Colors - Vibrant Orange/Coral Theme */
+    --primary: 14 100% 60%;
+    --primary-foreground: 222 84% 4.9%;
+    --primary-glow: 20 100% 70%;
+    --primary-dark: 10 100% 50%;
+
+    /* Secondary Brand Colors */
+    --secondary: 222 84% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 222 84% 13.2%;
+
+    /* Accent & Highlight Colors - Pink/Purple Accents */
+    --accent: 320 85% 65%;
+    --accent-foreground: 222 84% 4.9%;
+    --accent-glow: 325 90% 75%;
+
+    /* Additional Accent Colors */
+    --accent-secondary: 280 100% 70%;
+    --accent-secondary-glow: 285 100% 80%;
+    --accent-tertiary: 45 100% 60%;
+    --accent-tertiary-glow: 50 100% 70%;
+
+    /* Muted & Text Colors */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --text-secondary: 215 16% 75%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border & Input Colors */
+    --border: 222 84% 11.2%;
+    --border-hover: 222 84% 15.2%;
+    --input: 222 84% 8.9%;
+    --input-hover: 222 84% 10.9%;
+    --ring: 250 100% 65%;
+
+    /* Glass Morphism */
+    --glass: 222 84% 6.9% / 0.8;
+    --glass-border: 210 40% 98% / 0.1;
+
+    /* Gradients - Multi-Color Vibrant Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(14 100% 60%), hsl(320 85% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(320 85% 65%), hsl(280 100% 70%));
+    --gradient-tertiary: linear-gradient(135deg, hsl(45 100% 60%), hsl(14 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 100% 60% / 0.15), hsl(320 85% 65% / 0.15));
+    --gradient-card: linear-gradient(145deg, hsl(222 84% 6.9%), hsl(222 84% 8.9%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(14 100% 60% / 0.25), hsl(320 85% 65% / 0.15), transparent 70%);
+    --gradient-rainbow: linear-gradient(90deg, hsl(14 100% 60%), hsl(45 100% 60%), hsl(120 70% 50%), hsl(200 100% 60%), hsl(280 100% 70%), hsl(320 85% 65%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(222 84% 4.9% / 0.5);
+    --shadow: 0 4px 6px -1px hsl(222 84% 4.9% / 0.7);
+    --shadow-md: 0 10px 15px -3px hsl(222 84% 4.9% / 0.8);
+    --shadow-lg: 0 20px 25px -5px hsl(222 84% 4.9% / 0.9);
+    --shadow-glow: 0 0 40px hsl(14 100% 60% / 0.4);
+    --shadow-glow-secondary: 0 0 50px hsl(320 85% 65% / 0.3);
+    --shadow-glow-tertiary: 0 0 35px hsl(45 100% 60% / 0.25);
+    --shadow-card: 0 8px 32px hsl(222 84% 4.9% / 0.6);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Effect */
+  .glass {
+    background: hsl(var(--glass));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Additional Gradient Text Variants */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-tertiary {
+    background: var(--gradient-tertiary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-rainbow {
+    background: var(--gradient-rainbow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Multi-Color Glow Variants */
+  .glow-effect-secondary {
+    position: relative;
+  }
+  
+  .glow-effect-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.3), transparent 70%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .glow-effect-secondary:hover::before {
+    opacity: 1;
+  }
+  
+  .glow-effect-tertiary {
+    position: relative;
+  }
+  
+  .glow-effect-tertiary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--accent-tertiary) / 0.25), transparent 70%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .glow-effect-tertiary:hover::before {
+    opacity: 1;
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card);
+    border-color: hsl(var(--border-hover));
+  }
+
+  /* Progress Bar Animation */
+  .progress-bar {
+    @apply relative overflow-hidden rounded-full bg-muted;
+    height: 8px;
+  }
+  
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-1000 ease-out;
+    background: var(--gradient-primary);
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Pulse Glow Animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4); 
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8); 
+    }
+  }
+
+  /* Slide Up Animation */
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Scale In Animation */
+  .scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
