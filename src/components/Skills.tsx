@@ -103,10 +103,9 @@ const Skills = () => {
                     <div className="relative">
                       <div className="progress-bar">
                         <div 
-                          className={`progress-fill ${lang.color.replace('bg-', 'bg-gradient-to-r from-')} to-${lang.color.split('-')[1]}-400`}
+                          className={`progress-fill ${lang.color}`}
                           style={{ 
-                            width: animateProgress ? `${lang.level}%` : '0%',
-                            background: `hsl(var(--primary))`
+                            width: animateProgress ? `${lang.level}%` : '0%'
                           }}
                         ></div>
                       </div>
