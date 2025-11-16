@@ -8,31 +8,35 @@ import aiChatImg from '@/assets/project-ai-chat.jpg';
 import ecommerceImg from '@/assets/project-ecommerce.jpg';
 import taskManagerImg from '@/assets/project-task-manager.jpg';
 import weatherImg from '@/assets/project-weather.jpg';
+import aijobs from '@/assets/aijobs.jpg';
+import docs from '@/assets/docs.png';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with modern UI, secure payment integration, and admin dashboard. Features include product catalog, shopping cart, user authentication, and order management.',
-      image: ecommerceImg,
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'JWT'],
-      githubUrl: 'https://github.com/alexjohnson/ecommerce-platform',
-      liveUrl: 'https://myecommerce-demo.vercel.app',
-      date: '2024',
+      title: 'AI-Powered Job Recommendation & Resume Analyzer',
+      description: 'A full-stack application that leverages AI to recommend jobs and analyze resumes. Features include user authentication, resume parsing, and job matching algorithms.',
+      image: aijobs,
+      technologies: ['React18', 'TypeScript', 'Supabase', 'PostgreSQL ', 'Framer Motion','shadcn/ui + Radix UI'],
+      githubUrl: 'https://github.com/chimalasaikiran/AI_JOBS_PORTAL',
+      liveUrl: 'https://ai-jobs-portal.vercel.app/',
+      date: '2025',
       featured: true
     },
     {
-      id: 2,
-      title: 'AI Task Manager',
-      description: 'Smart task management application with AI-powered task prioritization and deadline suggestions. Includes drag-and-drop Kanban board, team collaboration features, and productivity analytics.',
-      image: taskManagerImg,
-      technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL'],
-      githubUrl: 'https://github.com/alexjohnson/ai-task-manager',
-      liveUrl: 'https://aitaskmanager-demo.vercel.app',
-      date: '2024',
-      featured: true
-    },
+  id: 2,
+  title: 'Document Summary Assistant',
+  description:
+    'AI-powered web app that summarizes PDFs and images using Google Gemini. Supports drag-and-drop upload, adjustable summary length, responsive UI, and one-click copy of markdown summaries.',
+  image:docs, // update this import/variable name as needed
+  technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Google Gemini API'],
+  githubUrl: 'https://github.com/your-username/document-summary-assistant', // replace with your actual repo
+  liveUrl: 'https://document-summary-assistant-dusky.vercel.app/',
+  date: '2025',
+  featured: true
+},
+
     {
       id: 3,
       title: 'AI Chatbot Assistant',
