@@ -1,4 +1,4 @@
-import ResumePdf from '@/assets/SaikiranChimala_Resume.pdf'; // Import the resume
+import ResumePdf from '../assets/Saikiran_resume-1.pdf'; // Import the resume
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';

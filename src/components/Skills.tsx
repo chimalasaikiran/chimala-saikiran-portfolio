@@ -6,7 +6,7 @@ const Skills = () => {
 
   // ---------------- NEW PROGRAMMING LANGUAGES ----------------
   const programmingLanguages = [
-    { name: 'C / C++', level: 85, color: 'bg-blue-600' },
+    { name: 'C++', level: 85, color: 'bg-blue-600' },
     { name: 'Java', level: 80, color: 'bg-orange-500' },
     { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
     { name: 'SQL (Postgres, Firebase)', level: 75, color: 'bg-green-500' }
@@ -31,7 +31,7 @@ const Skills = () => {
       title: 'Databases',
       skills: [
         { name: 'MongoDB', level: 75 },
-        { name: 'SQL', level: 80 },
+        { name: 'MySQL', level: 80 },
         { name: 'Firebase', level: 70 }
       ]
     },
@@ -40,8 +40,6 @@ const Skills = () => {
       title: 'Developer Tools & DevOps',
       skills: [
         { name: 'Git & GitHub', level: 85 },
-        { name: 'Docker', level: 60 },
-        { name: 'Google Cloud Platform', level: 55 },
         { name: 'Firebase Hosting', level: 70 },
         { name: 'VS Code', level: 90 }
       ]
@@ -55,8 +53,6 @@ const Skills = () => {
         { name: 'Computer Networks', level: 70 },
         { name: 'Operating Systems', level: 70 },
         { name: 'Data Structures & Algorithms', level: 80 },
-        { name: 'Design & Analysis of Algorithms', level: 75 },
-        { name: 'Software Design', level: 70 }
       ]
     }
   ];

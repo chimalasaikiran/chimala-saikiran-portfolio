@@ -10,6 +10,8 @@ import taskManagerImg from '@/assets/project-task-manager.jpg';
 import weatherImg from '@/assets/project-weather.jpg';
 import aijobs from '@/assets/aijobs.jpg';
 import docs from '@/assets/docs.png';
+import smartmanager from '../assets/smartmanager.png';
+import aigen from '../assets/ai_gen.png';
 
 const Projects = () => {
   const projects = [
@@ -39,24 +41,32 @@ const Projects = () => {
 
     {
       id: 3,
-      title: 'AI Chatbot Assistant',
-      description: 'Intelligent chatbot powered by natural language processing. Supports context-aware conversations, file uploads, and integration with popular messaging platforms.',
-      image: aiChatImg,
-      technologies: ['Python', 'Flask', 'OpenAI API', 'React', 'WebSocket'],
-      githubUrl: 'https://github.com/alexjohnson/ai-chatbot',
+      title: 'Smart Site Task Manager',
+      description: 'A smart task management system with automatic task classification, priority detection, and action suggestions using keyword-based analysis. Includes a Flutter mobile app with Material 3 UI and a scalable backend.',
+      image: smartmanager,
+      technologies: ['Flutter',
+    'Node.js',
+    'Express.js',
+    'Supabase',
+    'PostgreSQL'],
+      githubUrl: 'https://github.com/chimalasaikiran/smart-site-manager',
       liveUrl: 'https://aichatbot-demo.vercel.app',
-      date: '2023',
+      date: '2025',
       featured: false
     },
     {
       id: 4,
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather application with location-based forecasts, interactive maps, and weather alerts. Features responsive design and offline capability.',
-      image: weatherImg,
-      technologies: ['React', 'TypeScript', 'Weather API', 'Chart.js', 'PWA'],
-      githubUrl: 'https://github.com/alexjohnson/weather-dashboard',
-      liveUrl: 'https://weather-dashboard-demo.vercel.app',
-      date: '2023',
+      title: 'AI Content Generator',
+      description: 'AI-powered web application for generating social media captions, blog ideas, product descriptions, and professional email templates using Google Gemini API. Features modern UI, dark mode, markdown rendering, and generation history.',
+      image: aigen,
+      technologies: ['React',
+    'Tailwind CSS',
+    'Google Gemini API',
+    'JavaScript',
+    ],
+      githubUrl: 'https://github.com/chimalasaikiran/AI_Content_Generator',
+      liveUrl: 'https://ai-content-generator-gamma-one.vercel.app/',
+      date: '2025',
       featured: false
     }
   ];
